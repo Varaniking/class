@@ -1,34 +1,53 @@
 #include"Header.h"
 class Students {
-public:
+private:
 	string name;
 	int age;
 	double mark;
 	bool alive;
 	char sex;
 
+public:
 	Students() {
 		name = "no name";
-		age = 6;
+		age = 14;
 		mark = 4;
-		sex = 'f';
+		sex = 'm';
 		alive = true;
 	}
 
-	Students(string initName) {
-		name = initName;
-	}
-	Students(string initName,int initAge,double initMark,char initSex,bool initAlive) {
+
+	Students(string initName, int initAge, double initMark, char initSex, bool initAlive) {
 		name = initName;
 		age = initAge;
 		mark = initMark;
 		sex = initSex;
 		alive = initAlive;
 	}
-	string getInfo() {
-		return name + ": age= " + to_string(age)
-			+ "; mark =" + to_string(mark)
-			+ ";is alive or not =" + (alive ? "true" : "false")
-			+ ";sex = " + to_string(sex);
+
+	~Students() {
+
 	}
+
+	string getName();
+
+	void setName(string n);
+
+	int getAge();
+
+	void setAge(int a);
+
+	double getMark();
+
+	void setMark(double m);
+
+	char getSex();
+
+	void setSex(char s);
+
+	bool getAlive();
+
+	void setAlive(bool al);
+
+	string getInfo();
 };
