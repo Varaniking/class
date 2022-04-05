@@ -8,46 +8,32 @@ private:
 	char sex;
 
 public:
-	Students() {
-		name = "no name";
-		age = 14;
-		mark = 4;
-		sex = 'm';
-		alive = true;
-	}
+	Students();
 
 
-	Students(string initName, int initAge, double initMark, char initSex, bool initAlive) {
-		name = initName;
-		age = initAge;
-		mark = initMark;
-		sex = initSex;
-		alive = initAlive;
-	}
+	Students(string name, int age, double mark, char sex, bool alive);
 
-	~Students() {
-
-	}
+	~Students();
 
 	string getName();
 
-	void setName(string n);
+	void setName(string name);
 
 	int getAge();
 
-	void setAge(int a);
+	void setAge(int age);
 
 	double getMark();
 
-	void setMark(double m);
+	void setMark(double mark);
 
 	char getSex();
 
-	void setSex(char s);
+	void setSex(char sex);
 
 	bool getAlive();
 
-	void setAlive(bool al);
+	void setAlive(bool alive);
 
 	string getInfo();
 };
