@@ -1,20 +1,20 @@
 #include "Students.h"
 
 class Group {
-public:
+private:
+	int size;
+	string name;
 	Students* list;
+public:
+	Group();
+	Group(string name);
+	Group(string name,Students* list,int size);
+	~Group();
 
-	Group() {
-		list = NULL;
-	}
-
-	void add(Students student) {
-		if (list==NULL)
-		{
-			list = new Students[1];
-			list[0] = student;
-			count = 1;
-		}
-	}
-
+	void add(Students student);
+	Students get(int index);
+	int getSize();
+	string getName(string name);
+	void setName(string name);
+	string getInfo();
 };
